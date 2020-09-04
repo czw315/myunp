@@ -9,4 +9,4 @@ TCP分节表征记录结束的方法
 线程函数错误时一般不置errno, 省去了调用函数的开销，而是将该数值作为返回值．
 ## 1.7 OSI模型
 应用层可利用原始套接字直接访问IP层，也可以直接访问链路层．
- ![OSI模型](https://) 
+ ![OSI模型](https://github.com/czw315/myunp/tree/master/images/OSI.png) 
