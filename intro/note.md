@@ -8,5 +8,14 @@ TCP分节表征记录结束的方法
 传统UNIX API中errno是一个全局整型变量，在多线程程序中，每个线程都有自己的errno.在linux中，将errno定义为一个宏，可展开为一个函数调用，该函数返回一个可修改的左值，且为每一个线程独有．要启用errno的线程级实现，要包含<errno.h>头文件．
 线程函数错误时一般不置errno, 省去了调用函数的开销，而是将该数值作为返回值．
 ## 1.7 OSI模型
-应用层可利用原始套接字直接访问IP层，也可以直接访问链路层．
- ![OSI模型](https://github.com/czw315/myunp/tree/master/images/OSI.png) 
+应用层可利用原始套接字直接访问IP层，也可以直接访问链路层．<br>
+![OSI](https://raw.githubusercontent.com/czw315/myunp/master/images/OSI.png) 
+## 网络拓扑发现
+一些命令：netstat -ni; netstat -nr; ifconfig [interface]; ping -b broad-address
+## 习题思考
+1.3 端口错误会返回connect refused,得到RST分节
+
+正常的TCP流程
+
+
+1.4 read次数会随机变化
