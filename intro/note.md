@@ -14,8 +14,8 @@ TCP分节表征记录结束的方法
 一些命令：netstat -ni; netstat -nr; ifconfig [interface]; ping -b broad-address
 ## 习题思考
 1.3 端口错误会返回connect refused,得到RST分节
-
+![porterror](https://raw.githubusercontent.com/czw315/myunp/master/images/porterror.png)
 正常的TCP流程
-
+![正常的TCP](https://raw.githubusercontent.com/czw315/myunp/master/images/%E6%AD%A3%E5%B8%B8%E7%9A%84TCP.png)
 
 1.4 read次数会随机变化
