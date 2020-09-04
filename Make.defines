@@ -1,0 +1,5 @@
+CC = gcc
+CFLAGS = -I../lib -g -O2 -D_REENTRANT -Wall
+LIBS = ../libunp.a -lpthread
+
+LIBUNP_NAME = ../libunp.a
