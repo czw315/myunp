@@ -72,3 +72,34 @@ Listen(int fd, int backlog)
 	if (listen(fd, backlog) < 0)
 		err_sys("listen error");
 }
+
+pid_t Fork(void){
+	pid_t pid;
+	if((pid=fork())==-1)
+		err_sys("fork error");
+	return pid;
+}
+
+void Inet_pton(int family, const char *strptr, void *addrptr)
+{
+	int		n;
+
+	if ( (n = inet_pton(family, strptr, addrptr)) < 0)
+		err_sys("inet_pton error for %s", strptr);	/* errno set */
+	else if (n == 0)
+		err_quit("inet_pton error for %s", strptr);	/* errno not set */
+
+	/* nothing to return */
+}
+
+char *Fgets(char *s, int size, FILE *stream){
+	char* p;
+	if((p=fgets(s, size, stream))==NULL&&ferror(stream))
+		err_sys("fgets error");
+	return p;
+}
+
+void Fputs(const char *s, FILE *stream){
+	if(fputs(s, stream)==EOF)
+		err_sys("fputs error");
+}
